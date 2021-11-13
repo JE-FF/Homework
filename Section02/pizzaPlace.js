@@ -4,7 +4,7 @@ let numberOfToppings = 11;
 console.log(pizzaPlace + " " + typeof(pizzaPlace));
 console.log(numberOfToppings + " " + typeof(numberOfToppings));
 
-console.log(pizzaPlace  + ` serves ` + numberOfToppings + ` kinds of toppings.`);
+console.log(`${pizzaPlace} serves ${numberOfToppings} kinds of toppings.`);
 
 if (numberOfToppings >= 10) {
     console.log("A whole lot of pizza.");
