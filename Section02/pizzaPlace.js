@@ -1,5 +1,5 @@
-let pizzaPlace = "Jeff's Pizza";
-let numberOfToppings = 11;
+const pizzaPlace = "Jeff's Pizza";
+const numberOfToppings = 11;
 
 console.log(pizzaPlace + " " + typeof(pizzaPlace));
 console.log(numberOfToppings + " " + typeof(numberOfToppings));
