@@ -22,7 +22,7 @@ function getPizzaOrder(size, crust, toppings) {
 
     if (toppings) {
         for(i = 0; i < toppings.length - 1; i++) {
-// NOT DONE HERE! MUST ITERATE THROUGH TOPPINGS LIST TO CHECK IF CUSTOMER INPUT IS VALID
+// NOT DONE HERE! Must iterate through PIZZA_TOPPINGS list to check if customer input is valid.
 
             pizzaArr.push(toppings[i]);
             customerInputEcho += `${toppings[i]}, `;
