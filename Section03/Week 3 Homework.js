@@ -21,9 +21,26 @@ function getPizzaOrder(size, crust, toppings) {
     let customerInputEcho = `One ${size} ${crust} pizza with `;
 
     if (toppings) {
-        for(i = 0; i < toppings.length - 1; i++) {
-// NOT DONE HERE! Must iterate through PIZZA_TOPPINGS list to check if customer input is valid.
+        for (i = 0; i < toppings.length; i++) {
+            let isValid = false;
 
+            if (isValid == false) {
+                for (j = 0; j < PIZZA_TOPPINGS.length; j++) {
+                    if (toppings[i] === PIZZA_TOPPINGS[j]) {
+                        isValid = true;
+                    }
+                }
+
+            }
+            
+            if (isValid == false) {
+                throw `Error: Invalid topping(s) selected, please try ordering again!`;
+            }
+        }
+    }
+
+    if (toppings) {
+        for(i = 0; i < toppings.length - 1; i++) {
             pizzaArr.push(toppings[i]);
             customerInputEcho += `${toppings[i]}, `;
         }
