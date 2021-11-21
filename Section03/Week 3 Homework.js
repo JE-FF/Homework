@@ -1,18 +1,17 @@
 const PIZZA_TOPPINGS = ["onions", "bell peppers", "pepperoncini", "olives", "mushrooms"];
-
 const GREET_MESSAGE = "Welcome to jeff's Pizza! Our toppings are:";
 
 function greetCustomer() {
-    let toppingList = GREET_MESSAGE;
+    let greetToppings = GREET_MESSAGE;
 
     for (i = 0; i < PIZZA_TOPPINGS.length; i++) {
         if (i < PIZZA_TOPPINGS.length - 1) {
-            toppingList += ` ${PIZZA_TOPPINGS[i]},`;
+            greetToppings += ` ${PIZZA_TOPPINGS[i]},`;
         } else {
-            toppingList += ` and ${PIZZA_TOPPINGS[i]}.`;
+            greetToppings += ` and ${PIZZA_TOPPINGS[i]}.`;
         }
     }
-    console.log(toppingList);
+    console.log(greetToppings);
 };
 
 // pretending there's a front-end providing size, crust, and toppings inputs.
@@ -30,9 +29,8 @@ function getPizzaOrder(size, crust, toppings) {
                         isValid = true;
                     }
                 }
-
             }
-            
+
             if (isValid == false) {
                 throw `Error: Invalid topping(s) selected, please try ordering again!`;
             }
@@ -76,8 +74,7 @@ function servePizza(pizzaObj) {
     if (pizzaObj.toppings){
         console.log(`Order up! Here's your ${pizzaObj.size} ${pizzaObj.crust} crust pizza with ${pizzaObj.toppings}. Enjoy!`);
     } else {
-        console.log(`Order up! Here's your ${pizzaObj.size} ${pizzaObj.crust} plain cheese pizza. Enjoy!`)
-
+        console.log(`Order up! Here's your ${pizzaObj.size} ${pizzaObj.crust} plain cheese pizza. Enjoy!`);
     }
 };
 
