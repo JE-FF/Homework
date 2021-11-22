@@ -19,6 +19,9 @@ function getPizzaOrder(size, crust, toppings) {
     let pizzaArr = [size, crust];
     let customerInputEcho = `One ${size} ${crust} pizza with `;
 
+    // Notes for improvement: Should use Array.isArray(arr) to check if toppings is an array.
+    // Just use toppings.includes() instead of nested for loops. Waaay cleaner.
+
     if (toppings) {
         for (i = 0; i < toppings.length; i++) {
             let isValid = false;
@@ -31,6 +34,7 @@ function getPizzaOrder(size, crust, toppings) {
                 }
             }
 
+            // Notes for improvement: throw should be handled by try / catch blocks.
             if (isValid == false) {
                 throw `Error: Invalid topping(s) selected, please try ordering again!`;
             }
