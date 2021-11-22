@@ -15,11 +15,14 @@ function greetCustomer() {
 };
 
 // pretending there's a front-end providing size, crust, and toppings inputs.
-function getPizzaOrder(size, crust, toppings) {
+function getPizzaOrder(size, crust, ...toppings) {
     let pizzaArr = [size, crust];
     let customerInputEcho = `One ${size} ${crust} pizza with `;
 
-    if (toppings) {
+    // Notes for improvement: Should use Array.isArray(arr) to check if toppings is an array.
+    // Just use toppings.includes() instead of nested for loops. Waaay cleaner.
+
+    if (toppings.length > 0) {
         for (i = 0; i < toppings.length; i++) {
             let isValid = false;
 
@@ -31,13 +34,14 @@ function getPizzaOrder(size, crust, toppings) {
                 }
             }
 
+            // Notes for improvement: throw should be handled by try / catch blocks.
             if (isValid == false) {
                 throw `Error: Invalid topping(s) selected, please try ordering again!`;
             }
         }
     }
 
-    if (toppings) {
+    if (toppings.length > 0) {
         for(i = 0; i < toppings.length - 1; i++) {
             pizzaArr.push(toppings[i]);
             customerInputEcho += `${toppings[i]}, `;
@@ -83,7 +87,7 @@ greetCustomer();
 
 console.log("\n---FIRST PIZZA, ALL TOPPINGS---")
 
-servePizza(preparePizza(getPizzaOrder("medium", "thin", ["onions", "bell peppers", "pepperoncini", "olives", "mushrooms"])));
+servePizza(preparePizza(getPizzaOrder("medium", "thin", "onions", "bell peppers", "pepperoncini", "olives", "mushrooms")));
 
 console.log("\n---SECOND PIZZA, NO TOPPINGS---");
 
@@ -91,4 +95,4 @@ servePizza(preparePizza(getPizzaOrder("medium", "thin")));
 
 console.log("\n---THIRD PIZZA, INVALID TOPPINGS---")
 
-servePizza(preparePizza(getPizzaOrder("medium", "thin", ["toothpaste", "eggs", "stale crackers"])));
+servePizza(preparePizza(getPizzaOrder("medium", "thin", "toothpaste", "eggs", "stale crackers")));
