@@ -6,14 +6,17 @@ nav {
     text-align: right;
 }
 
+#nav {
+    display: flex;
+    flex-direction: row;
+}
+
 a:hover {
     background-color: #6a3c2c;
     color: #e7ece4;
-    tex
 }
 
 #logo {
     position: relative;
     float: left;
-
 }
