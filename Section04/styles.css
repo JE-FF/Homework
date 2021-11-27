@@ -11,34 +11,47 @@ padding-bottom: 2.5%;
 #pageTitle {
     display: inline;
 	font-size: 64px;
+    font-style: italic;
     margin: 0 auto;
 	}
 
-#socialLinks {
-    text-align: center;
+.socialLinks {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
 }
 
-#socialLinks > a > img {
+.socialLinks > li > a > img {
+    text-align: center;
     width: 50px; height: auto;
-	font-family: arial;
-    justify-content:  center;
-	}
+    margin: 5px;
+    display: inline;
 
-#certBadges {
-    text-align: center;
-    /* margin-left: 15%;
-    margin-right: 15%; */
 }
 
-#certBadges > a > img {
-    font-family: arial;
+#certifications{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.certBadges {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
+}
+
+.certBadges > li > a > img {
     height: 200px;
     width: auto;
-    }
+
+   
+}
 
 .aboutMe {
     margin-left: 15%;
     margin-right: 15%;
+    text-align: center;
     
 }
 

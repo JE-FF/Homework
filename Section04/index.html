@@ -12,41 +12,44 @@
     <!-- Nested header to achieve text-cursor blink animation at the end of page title,
     I tried to make the id into a class, but it kept breaking. No idea why. -->
     <div class="title">
-        <h1 id="pageTitle"><i>~$jeffEdson<h1 id="pageTitle" class="blink">_</i></h1></h1>
+        <h1 id="pageTitle">~$jeffEdson<h1 id="pageTitle" class="blink">_</h1></h1>
     </div>
 
-		<div id="socialLinks">
-			<a href="https://www.linkedin.com/in/jeffreyedson">
-				<img src="assets/icons/linkedin.svg" alt="link to linkedin"/></a>
+		<ul class="socialLinks">
+			<li class="socialLinks"><a href="https://www.linkedin.com/in/jeffreyedson">
+				<img src="assets/icons/linkedin.svg" alt="link to linkedin"/></a></li>
 
-			<a href="https://github.com/JE-FF">
-                <img src="assets/icons/github.svg" alt="link to github"/></a>
+			<li class="socialLinks"><a href="https://github.com/JE-FF">
+                <img src="assets/icons/github.svg" alt="link to github"/></a></li>
 
-            <a href="mailto:jeffrey.edson@protonmail.com">
-                <img src="assets/icons/icon-email.svg" alt="email jeffrey.edson@protonMail.com"/></a>
-        </div>
+            <li class="socialLinks"><a href="mailto:jeffrey.edson@protonmail.com">
+                <img src="assets/icons/icon-email.svg" alt="email jeffrey.edson@protonMail.com"/></a></li>
+        </ul>
+
 		<hr>
     </header>
     <main>
-        <div id="certBadges">
+        <div id="certifications">
             <h2>CERTIFICATIONS</h2>
-            <a href="https://www.credly.com/badges/09b62e70-c22a-4135-abd3-2e8d888baa6b/public_url">
-                <img src="assets/certificate-badges/comptia-a-ce-certification.1.png"
-                alt="Comptia A+ Certification"/></a>
+            <ul class="certBadges">
+                <li class="certBadges"><a href="https://www.credly.com/badges/09b62e70-c22a-4135-abd3-2e8d888baa6b/public_url">
+                    <img src="assets/certificate-badges/comptia-a-ce-certification.1.png"
+                    alt="Comptia A+ Certification"/></a></li>
 
-            <a href="https://www.credly.com/badges/570427cc-fa63-4da7-bfbd-56e103d84b65/public_url">
-                <img src="assets/certificate-badges/google-it-support-certificate.png"
-                alt="Google IT Support Certification"/></a>
+                <li class="certBadges"><a href="https://www.credly.com/badges/570427cc-fa63-4da7-bfbd-56e103d84b65/public_url">
+                    <img src="assets/certificate-badges/google-it-support-certificate.png"
+                    alt="Google IT Support Certification"/></a></li>
 
-            <a href="https://www.credly.com/badges/59419373-456a-42f9-b684-058802bad062/public_url">
-                <img src="assets/certificate-badges/comptia-project-certification.1.png"
-                alt="Comptia Project+ Certification"/></a>
+                <li class="certBadges"><a href="https://www.credly.com/badges/59419373-456a-42f9-b684-058802bad062/public_url">
+                    <img src="assets/certificate-badges/comptia-project-certification.1.png"
+                    alt="Comptia Project+ Certification"/></a></li>
+            </ul>
         </div>
 
         <hr>
 
         <div class="aboutMe">
-            <h2>About Me:</h2>
+            <h2>About Me</h2>
                 <p id="aboutMeStatement">
                     From the age of 7 I have always had my own personal computer because my dad's 
                     work would give away their outdated computers to the employees. I've used MacOS
