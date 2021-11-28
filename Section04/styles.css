@@ -1,0 +1,72 @@
+* {
+	background-color: #f6f6f6;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+	}
+	
+.title {
+text-align: center;
+padding-bottom: 2.5%;
+}
+
+#pageTitle {
+    display: inline;
+	font-size: 64px;
+    font-style: italic;
+    margin: 0 auto;
+	}
+
+.socialLinks {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
+}
+
+.socialLinks > li > a > img {
+    text-align: center;
+    width: 50px; height: auto;
+    margin: 5px;
+    display: inline;
+
+}
+
+#certifications{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.certBadges {
+    display: flex;
+    padding-inline-start: 0;
+    justify-content: center;
+}
+
+.certBadges > li > a > img {
+    height: 200px;
+    width: auto;
+
+   
+}
+
+.aboutMe {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    
+}
+
+#aboutMeStatement {
+    text-align: left;
+}
+
+/* Blinking technique borrowed from https://www.computerhope.com/issues/ch001651.htm */
+.blink {
+ animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+ 0% { opacity: 1; }
+ 50% { opacity: 1; }
+ 50.01% { opacity: 0; }
+ 100% { opacity: 0; }
+}
