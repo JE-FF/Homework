@@ -2,13 +2,30 @@
     background-color: #e7ece4;
     font-family: Arial, Helvetica, sans-serif;
 }
-nav {
-    text-align: right;
+
+header {
+    display: grid;
+    width: 100%;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
 }
 
-#nav {
-    display: flex;
-    flex-direction: row;
+#logo {
+    margin: 1%;
+    justify-self: left;
+}
+
+.headerTitle {
+    position: absolute;
+    justify-self: center;
+}
+
+nav {
+    position: absolute;
+    justify-self: right;
+    height: min-content;
+    margin: 1%;
 }
 
 a:hover {
@@ -16,7 +33,31 @@ a:hover {
     color: #e7ece4;
 }
 
-#logo {
-    position: relative;
-    float: left;
+/* Width of main-element flex container is slightly smaller than width of header container
+despite header width = 100% and main-flex-itmes adding up to 100%. Perhaps pixel rounding error?*/
+main {
+    display: flex;
+    width: 100%
+}
+
+.gardenList {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    flex-basis: 25%;
+    height: 80vh;
+    text-align: center;
+}
+
+.centerContainer {
+    flex-basis: 50%;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.events {
+    display: flex;
+    flex-basis: 25%;
+    border-width: 1px;
+    border-style: solid;
 }
